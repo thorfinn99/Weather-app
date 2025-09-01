@@ -10,7 +10,7 @@ const WeatherDashboard = () => {
   const [city, setCity] = useState("London"); // Default city
   const [airQualityData, setAirQualityData] = useState(null);
   const [fiveDayForecast, setFiveDayForecast] = useState(null);
-  const API_KEY = "b44cf928bb09e86e5b8f6b5a4d5110a5"; // Your API key
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   useEffect(() => {
     fetchWeatherData(city);
